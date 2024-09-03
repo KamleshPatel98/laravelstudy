@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ToastrController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ToastrController::class,'toastNotification'])->name('toastr_notification');
